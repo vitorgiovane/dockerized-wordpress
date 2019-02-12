@@ -1,0 +1,13 @@
+{
+    "name": "vitor/temaswordpress",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Vitor",
+            "email": "vitorgpalves@gmail.com"
+        }
+    ],
+    "require": {
+        "vlucas/phpdotenv": "^3.3"
+    }
+}

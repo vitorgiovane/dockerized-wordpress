@@ -1,0 +1,65 @@
+version: "3"
+
+services:
+  # MariaDB (10.4.2-bionic)
+  mariadb:
+    container_name: "son-mariadb"
+    build:
+      context: ./
+      dockerfile: ./docker/mariadb/Dockerfile
+    volumes:
+    - ${MARIADB_DATA_VOLUME_ORIGIN}:${MARIADB_DATA_VOLUME_DESTINY}
+    restart: "always"
+    ports:
+      - "${MARIADB_PORT}:3306"
+    environment:
+      - MYSQL_DATABASE=${MARIADB_DATABASE}
+      - MYSQL_USER=${MARIADB_USER}
+      - MYSQL_PASSWORD=${MARIADB_PASSWORD}
+      - MYSQL_ROOT_PASSWORD=${MARIADB_ROOT_PASSWORD}
+      - MYSQL_ALLOW_EMPTY_PASSWORD=${MARIADB_ALLOW_EMPTY_PASSWORD}
+
+# PHP (7.2.1)
+  php:
+    container_name: "son-php"
+    build:
+      context: ./
+      dockerfile: ./docker/php/Dockerfile
+    ports:
+      - "${PHP_PORT}:80"
+    volumes:
+      - ./:/usr/share/nginx/html
+    restart: "always"
+
+  # Nginx (1.15.8)
+  nginx:
+    container_name: "son-nginx"
+    build:
+      context: ./
+      dockerfile: ./docker/nginx/Dockerfile
+    restart: "always"
+    volumes:
+      - ./:/usr/share/nginx/html
+      - ./docker/nginx/default.conf:/etc/nginx/conf.d/default.conf
+    ports:
+      - "${NGINX_PORT}:80"
+    links:
+      - "php"
+      - "mariadb"
+
+  # PHP My Admin (4.7)
+  phpmyadmin:
+    container_name: "son-phpmyadmin"
+    build:
+      context: ./
+      dockerfile: ./docker/phpmyadmin/Dockerfile
+    restart: "always"
+    ports:
+      - "${PMA_PORT}:80"
+    links:
+      - mariadb
+    environment:
+      - PMA_HOST=${PMA_DB_HOST}
+      - PMA_PORT=${PMA_DB_PORT}
+      - PMA_USER=${PMA_DB_USER}
+      - PMA_PASSWORD=${PMA_DB_PASSWORD}

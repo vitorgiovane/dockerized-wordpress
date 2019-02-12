@@ -1,0 +1,4 @@
+.history
+.env
+vendor
+docker/mariadb/data
