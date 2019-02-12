@@ -3,7 +3,7 @@ version: "3"
 services:
   # MariaDB (10.4.2-bionic)
   mariadb:
-    container_name: "son-mariadb"
+    container_name: "dw-mariadb"
     build:
       context: ./
       dockerfile: ./docker/mariadb/Dockerfile
@@ -21,7 +21,7 @@ services:
 
 # PHP (7.2.1)
   php:
-    container_name: "son-php"
+    container_name: "dw-php"
     build:
       context: ./
       dockerfile: ./docker/php/Dockerfile
@@ -33,7 +33,7 @@ services:
 
   # Nginx (1.15.8)
   nginx:
-    container_name: "son-nginx"
+    container_name: "dw-nginx"
     build:
       context: ./
       dockerfile: ./docker/nginx/Dockerfile
@@ -49,7 +49,7 @@ services:
 
   # PHP My Admin (4.7)
   phpmyadmin:
-    container_name: "son-phpmyadmin"
+    container_name: "dw-phpmyadmin"
     build:
       context: ./
       dockerfile: ./docker/phpmyadmin/Dockerfile
