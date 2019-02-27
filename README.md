@@ -1,5 +1,5 @@
 # dockerized-wordpress
-> *Start a Wordpress 5.1 project in a docker environment ready to use*.
+> *Starts a Wordpress 5.1 project in a docker environment ready to use*.
   
 ![Wallpaper](https://user-images.githubusercontent.com/5404361/53292329-9f182c00-379f-11e9-9b19-f601ba5c5768.png)
 
