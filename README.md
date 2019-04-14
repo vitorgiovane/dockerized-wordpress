@@ -1,10 +1,10 @@
 # dockerized-wordpress
-> *Starts a Wordpress 5.1 project in a docker environment ready to use*.
+> *Starts a Wordpress 5.1.1 project in a docker environment ready to use*.
   
 ![Wallpaper](https://user-images.githubusercontent.com/5404361/53292329-9f182c00-379f-11e9-9b19-f601ba5c5768.png)
 
 ## Features
-Starts a completely clean installation of the WordPress (5.1) in a dockerized environment with MariaDB (10.4.2-bionic), PHP (7.2.1), Nginx (1.15.8) and PHP My Admin (4.7).
+Starts a completely clean installation of the WordPress (5.1) in a dockerized environment with MariaDB (10.4.2-bionic), PHP (7.3.1), Nginx (1.15.8) and PHP My Admin (4.7).
 
 This project is ready to work with environment variables. The database access data of the Wordpress application is reported in the **.env** file at the project root, along with the environment variables of the containers.
   
