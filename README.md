@@ -1,7 +1,7 @@
 # dockerized-wordpress
 > *Starts a Wordpress 5.1.1 project in a docker environment ready to use*.
   
-![Wallpaper](https://user-images.githubusercontent.com/5404361/53292329-9f182c00-379f-11e9-9b19-f601ba5c5768.png)
+![Wallpaper](https://user-images.githubusercontent.com/5404361/56099374-5436ad00-5ee2-11e9-8f18-4e7bc1ab8a5d.png)
 
 ## Features
 Starts a completely clean installation of the WordPress (5.1) in a dockerized environment with MariaDB (10.4.2-bionic), PHP (7.3.1), Nginx (1.15.8) and PHP My Admin (4.7).
