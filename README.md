@@ -11,7 +11,7 @@ This project is ready to work with environment variables. The database access da
 ## Steps to get started
 1 - Make sure you have Docker and Docker Compose installed on your operating system. If you do not access the official documentation at https://docs.docker.com/install/ and install.
 
-2 - Clone this repository with the command **`git clone git@github.com:vitorgiovane/dockerizedwordpress.git`** or **`git clone https://github.com/vitorgiovane/dockerizedwordpress.git`** in a terminal.
+2 - Clone this repository with the command **`git clone git@github.com:vitorgiovane/dockerized-wordpress.git`** or **`git clone https://github.com/vitorgiovane/dockerized-wordpress.git`** in a terminal.
 
 3 - Open the project root folder in a terminal and run the **`composer install`** command.
 
